@@ -5,7 +5,7 @@ from sorting.merge_sort import merge_sort
 import numpy as np
 import time
 
-l = np.random.randint(0, 10, 1000)
+l = np.random.randint(0, 1000, 1000)
 
 # print(f"Array is:{l}")
 
@@ -30,7 +30,13 @@ def insertion():
 def merge():
     start_time = time.time()
     merge_sort(l)
-    print(f"Megre sort execution: {(time.time() - start_time)}")
+    print(f"Merge sort execution: {(time.time() - start_time)}")
+
+def std_sorted():
+    start_time = time.time()
+    sorted(l)
+    print(f"Std sorted execution: {(time.time() - start_time)}")
+
 
 if __name__ == '__main__':
     print('---')
@@ -41,3 +47,5 @@ if __name__ == '__main__':
     insertion()
     print('---')
     merge()
+    print('---')
+    std_sorted()
