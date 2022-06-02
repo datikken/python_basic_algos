@@ -2,12 +2,11 @@ from sorting.bubble_sort import bubble_sort
 from sorting.selection_sort import selection_sort
 from sorting.insertion_sort import insertion_sort
 from sorting.merge_sort import merge_sort
+from sorting.quick_sort import quick_sort
 import numpy as np
 import time
 
 l = np.random.randint(0, 1000, 1000)
-
-# print(f"Array is:{l}")
 
 def bubbles():
     start_time = time.time()
@@ -37,6 +36,12 @@ def std_sorted():
     sorted(l)
     print(f"Std sorted execution: {(time.time() - start_time)}")
 
+def quick():
+    start_time = time.time()
+    quick_sort(l)
+    # print(l)
+    print(f"Quick sorted execution: {(time.time() - start_time)}")
+
 
 if __name__ == '__main__':
     print('---')
@@ -49,3 +54,5 @@ if __name__ == '__main__':
     merge()
     print('---')
     std_sorted()
+    print('---')
+    quick()
