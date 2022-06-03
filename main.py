@@ -46,7 +46,7 @@ def quick():
 searchable = [1,2,3,4]
 
 if __name__ == '__main__':
-    print(binary_search(searchable, 3))
+    print(binary_search(3, searchable, 0, len(searchable)-1))
     # print('---')
     # bubbles()
     # print('---')

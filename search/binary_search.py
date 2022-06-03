@@ -1,12 +1,12 @@
-def binary_search(numbers, n):
-	low = 0
-	high = len(numbers)-1
-	while low <= high:
-		middle = (low + high) // 2
-		if n == numbers[middle]:
-			return middle
-		elif n > numbers[middle]:
-			low = middle + 1
+def binary_search(n, numbers, start, stop):
+	if start > stop:
+		return f"{n} not found"
+	else:
+		mid = (start + stop)//2
+		if n == numbers[mid]:
+			return mid
+		elif n > numbers[mid]:
+			return binary_search(n, numbers, mid+1, stop)
 		else:
-			high = middle - 1
+			return binary_search(n, numbers, start, mid-1)
 	return "Not found"
