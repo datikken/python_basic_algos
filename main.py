@@ -3,6 +3,7 @@ from sorting.selection_sort import selection_sort
 from sorting.insertion_sort import insertion_sort
 from sorting.merge_sort import merge_sort
 from sorting.quick_sort import quick_sort
+from search.binary_search import binary_search
 import numpy as np
 import time
 
@@ -44,15 +45,16 @@ def quick():
 
 
 if __name__ == '__main__':
-    print('---')
-    bubbles()
-    print('---')
-    selection()
-    print('---')
-    insertion()
-    print('---')
-    merge()
-    print('---')
-    std_sorted()
-    print('---')
-    quick()
+    print(binary_search([1,2,3,4], 3))
+    # print('---')
+    # bubbles()
+    # print('---')
+    # selection()
+    # print('---')
+    # insertion()
+    # print('---')
+    # merge()
+    # print('---')
+    # std_sorted()
+    # print('---')
+    # quick()
