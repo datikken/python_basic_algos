@@ -43,9 +43,10 @@ def quick():
     # print(l)
     print(f"Quick sorted execution: {(time.time() - start_time)}")
 
+searchable = [1,2,3,4]
 
 if __name__ == '__main__':
-    print(binary_search([1,2,3,4], 3))
+    print(binary_search(searchable, 3))
     # print('---')
     # bubbles()
     # print('---')
